@@ -1,0 +1,24 @@
+.nav-container {
+    width: 80vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.nav-opt {
+    margin-left: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: xx-large;
+    color: #FFE66D;
+}
+
+.nav-opt:hover {
+    text-decoration: underline .1rem;
+    text-underline-offset: 1rem;
+    cursor: pointer;
+}

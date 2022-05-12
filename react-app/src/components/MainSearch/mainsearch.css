@@ -1,0 +1,24 @@
+.main-search {
+    height: 60vh;
+    margin: auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchbar {
+    width: 60%;
+    font-size: xx-large;
+    padding: 1rem;
+    background-color: #292F36;
+    border: 1px solid #4ECDC4;
+    border-radius: .5rem;
+    color: #F7FFF7;
+    font-family: 'Changa', sans-serif;
+}
+
+#searchbar:focus {
+    outline: none;
+}
