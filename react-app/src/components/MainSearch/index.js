@@ -1,5 +1,5 @@
 import React from 'react';
-import TypeSelect from '../../components/TypeSelect/index';
+import TypeSelect from '../TypeSelect/index';
 import './mainsearch.css';
 
 const MainSearch = () => {
@@ -9,7 +9,7 @@ const MainSearch = () => {
                 id='searchbar'
                 placeholder='What are you looking for?'
             />
-            
+            <TypeSelect />
         </div>
     )
 }
