@@ -1,17 +1,14 @@
 import React from 'react';
-import TypeSelect from '../TypeSelect/index';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { allItems, setResults } from '../../store/items';
+import { setResults } from '../../store/search';
 import './mainsearch.css';
 import { useState } from 'react';
 
-const MainSearch = () => {
+const MainSearch = ({ slugs }) => {
     const [search, setSearch] = useState("");
     const dispatch = useDispatch();
     const history = useHistory();
-    let slugs = [];
-    dispatch(allItems()).then(items => slugs.push(...items));
 
     const handleSearch = () => {
         let query = search.split(" ");

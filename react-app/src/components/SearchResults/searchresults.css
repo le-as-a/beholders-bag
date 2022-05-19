@@ -1,0 +1,19 @@
+.result-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-link {
+    color: #4ECDC4;
+    text-decoration: none;
+}
+
+.result-link:hover {
+    color: #F7FFF7;
+}
+
+.result-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

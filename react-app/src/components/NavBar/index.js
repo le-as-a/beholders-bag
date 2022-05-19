@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './navbar.css';
 
 const NavBar = ({ user }) => {
@@ -14,13 +15,13 @@ const NavBar = ({ user }) => {
         view = (
             <>
                 <div className='nav-opt'>
-                    Demo
+                    <NavLink to='/items'>Browse</NavLink>
                 </div>
                 <div className='nav-opt'>
-                    Register
+                    <NavLink to='/about'>About</NavLink>
                 </div>
                 <div className='nav-opt'>
-                    Login
+                    <NavLink to='/'>Main</NavLink>
                 </div>
             </>
         )

@@ -22,3 +22,8 @@
     text-underline-offset: 1rem;
     cursor: pointer;
 }
+
+.nav-opt a {
+    color: #FFE66D;
+    text-decoration: none;
+}
