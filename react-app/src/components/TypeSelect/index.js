@@ -29,12 +29,6 @@ const TypeSelect = () => {
 
     const handleChange = event => setType(event.target.value);
 
-    useEffect(() => {
-        if (type) {
-            dispatch(grabInfo(type));
-        }
-    }, [dispatch, type])
-
     return (
         <FormControl id='type-form'>
             <InputLabel

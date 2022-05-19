@@ -1,11 +1,13 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import session from './session';
-import dnd from './open5e';
+import items from './items';
+import search from './search';
 
 const rootReducer = combineReducers({
   session,
-  dnd
+  items,
+  search
 });
 
 
