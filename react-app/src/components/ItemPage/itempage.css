@@ -1,0 +1,15 @@
+.item-page {
+    width: 60vw;
+    margin: auto;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.item-title {
+    font-size: 50px;
+    font-family: 'Fredericka the Great', cursive;
+    width: 60%;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { setResults } from '../../store/search';
 import './mainsearch.css';
@@ -41,7 +41,7 @@ const MainSearch = ({ slugs }) => {
             </div>
             <div className='insert-container'>
                 <div className='cute-insert'>
-                    <img src='https://i.imgur.com/5ifvDST.png' id='beholder' />
+                    <img src='https://i.imgur.com/5ifvDST.png' id='beholder' alt='beholder' />
                     <div className='chatbubble'>
                         So you've come to<br />look at my wares?
                     </div>

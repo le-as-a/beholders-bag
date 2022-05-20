@@ -10,16 +10,14 @@
 
 .result-link:hover {
     color: #F7FFF7;
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 .result-line {
     display: flex;
     flex-direction: row;
     margin: 1rem;
-}
-
-.result-line:hover {
-    background-color: #4ECDC4;
 }
 
 .result-name {
@@ -38,4 +36,13 @@
 .result-attune {
     min-width: 5%;
     margin-left: 1rem;
+}
+
+.no-results {
+    display: flex;
+    justify-content: center;
+}
+
+.chatbubble#result-error {
+    width: 13em;
 }

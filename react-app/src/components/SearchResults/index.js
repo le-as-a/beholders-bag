@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import './searchresults.css';
@@ -17,7 +16,7 @@ const SearchResults = ({ slugs = null }) => {
 
     return (
         <div className='result-list'>
-            {list.map(item => (
+            {list.length > 0 ? list.map(item => (
                 <>
                     <NavLink to={`/items/${item.slug}`} className='result-link'>
                         <div className='result-line' key={`${item.slug}`}>
@@ -30,7 +29,18 @@ const SearchResults = ({ slugs = null }) => {
                         </div>
                     </NavLink>
                 </>
-            ))}
+            )) : (
+                <div className='no-results'>
+                    <div className='insert-container'>
+                        <div className='cute-insert'>
+                            <img src='https://i.imgur.com/5ifvDST.png' id='beholder' alt='beholder' />
+                            <div className='chatbubble' id='result-error'>
+                                I don't seem to have<br />what you seek.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }

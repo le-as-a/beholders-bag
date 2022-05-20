@@ -13,13 +13,13 @@ const About = () => {
                 associated with my app, and below you'll find ways to reach me.<br /><br />
                 <div className='about-links'>
                     <a href='https://www.linkedin.com/in/asia-le-073860103/' rel='noreferrer' target='_blank'>
-                        <img src='https://i.imgur.com/AkVl130.png' id='linkedin' />
+                        <img src='https://i.imgur.com/AkVl130.png' id='linkedin' alt='linkedin' />
                     </a>
                     <a href='https://angel.co/u/asia-le-1' rel='noreferrer' target='_blank'>
-                        <img src='https://i.imgur.com/LJxtKwI.png' id='angellist' />
+                        <img src='https://i.imgur.com/LJxtKwI.png' id='angellist' alt='angellist' />
                     </a>
                     <a href='https://github.com/le-as-a' rel='noreferrer' target='_blank'>
-                        <img src='https://i.imgur.com/YeTBDsA.png' id='github' />
+                        <img src='https://i.imgur.com/YeTBDsA.png' id='github' alt='github' />
                     </a>
                 </div>
             </div>
