@@ -8,6 +8,7 @@ import MainSearch from './components/MainSearch/index';
 import SearchResults from './components/SearchResults/index';
 import BrowseAll from './components/BrowseAll/index';
 import About from './components/About/index';
+import Error from './components/Error';
 import { setResults } from './store/search';
 import ItemPage from './components/ItemPage/index';
 
@@ -46,7 +47,10 @@ function App() {
           <SearchResults slugs={slugs} loaded={loaded} />
         </Route>
         <Route path='/items/:itemSlug' exact={true}>
-          <ItemPage />
+          <ItemPage loaded={loaded} />
+        </Route>
+        <Route>
+          <Error />
         </Route>
       </Switch>
     </BrowserRouter>

@@ -15,32 +15,40 @@ const SearchResults = ({ slugs = null }) => {
     }
 
     return (
-        <div className='result-list'>
-            {list.length > 0 ? list.map(item => (
-                <>
-                    <NavLink to={`/items/${item.slug}`} className='result-link'>
-                        <div className='result-line' key={`${item.slug}`}>
-                            <div className='result-name'>{item.name}</div>
-                            <div className='result-type'>{item.type}</div>
-                            <div className='result-rarity'>{item.rarity}</div>
-                            <div className='result-attune'>
-                                {(item.requires_attunement === 'requires attunement') ? "Y" : "N"}
+        <div className='browse'>
+            <div className='browse-titles'>
+                <div id='item-name'>Name</div>
+                <div id='item-type'>Type</div>
+                <div id='item-rarity'>Rarity</div>
+                <div id='item-attune'>Attune?</div>
+            </div>
+            <div className='result-list'>
+                {list.length > 0 ? list.map(item => (
+                    <>
+                        <NavLink to={`/items/${item.slug}`} className='result-link'>
+                            <div className='result-line' key={`${item.slug}`}>
+                                <div className='result-name'>{item.name}</div>
+                                <div className='result-type'>{item.type}</div>
+                                <div className='result-rarity'>{item.rarity}</div>
+                                <div className='result-attune'>
+                                    {(item.requires_attunement === 'requires attunement') ? "Y" : "N"}
+                                </div>
                             </div>
-                        </div>
-                    </NavLink>
-                </>
-            )) : (
-                <div className='no-results'>
-                    <div className='insert-container'>
-                        <div className='cute-insert'>
-                            <img src='https://i.imgur.com/5ifvDST.png' id='beholder' alt='beholder' />
-                            <div className='chatbubble' id='result-error'>
-                                I don't seem to have<br />what you seek.
+                        </NavLink>
+                    </>
+                )) : (
+                    <div className='no-results'>
+                        <div className='insert-container'>
+                            <div className='cute-insert'>
+                                <img src='https://i.imgur.com/5ifvDST.png' id='beholder' alt='beholder' />
+                                <div className='chatbubble' id='result-error'>
+                                    I don't seem to have<br />what you seek.
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            )}
+                )}
+            </div>
         </div>
     )
 }

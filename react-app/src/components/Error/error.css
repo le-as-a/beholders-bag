@@ -1,0 +1,14 @@
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    margin-top: 3em;
+    font-size: x-large;
+}
+
+#error-img {
+    width: 10em;
+}
