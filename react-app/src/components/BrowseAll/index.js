@@ -1,22 +1,13 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import './searchresults.css';
 
-const SearchResults = ({ slugs = null }) => {
-    const items = useSelector(state => state.items);
-    const results = useSelector(state => state.search);
-    const list = []
-
-    for (let query of results) {
-        if (slugs.includes(query) && !list.includes(items[query])) {
-            list.push(items[query]);
-        }
-    }
+const BrowseAll = () => {
+    const items = Object.values(useSelector(state => state.items));
 
     return (
-        <div className='result-list'>
-            {list.map(item => (
+        <div className='browse-all'>
+            {items.map(item => (
                 <NavLink to={`/items/${item.slug}`} className='result-link'>
                     <div className='result-line' key={`${item.slug}`}>
                         <div className='result-name'>{item.name}</div>
@@ -32,4 +23,4 @@ const SearchResults = ({ slugs = null }) => {
     )
 }
 
-export default SearchResults;
+export default BrowseAll;

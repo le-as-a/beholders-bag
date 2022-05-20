@@ -6,6 +6,8 @@ import { allItems } from './store/items';
 import NavBar from './components/NavBar/index';
 import MainSearch from './components/MainSearch/index';
 import SearchResults from './components/SearchResults/index';
+import BrowseAll from './components/BrowseAll/index';
+import { setResults } from './store/search';
 import ItemPage from './components/ItemPage/index';
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
   const user = useSelector(state => state.session.user);
   let slugs = [];
   dispatch(allItems()).then(items => slugs.push(...items));
+  dispatch(setResults(slugs));
 
   useEffect(() => {
     (async() => {
@@ -34,7 +37,7 @@ function App() {
           <MainSearch slugs={slugs} loaded={loaded} />
         </Route>
         <Route path='/items' exact={true}>
-          <SearchResults />
+          <BrowseAll />
         </Route>
         <Route path='/results' exact={true} loaded={loaded}>
           <SearchResults slugs={slugs} loaded={loaded} />

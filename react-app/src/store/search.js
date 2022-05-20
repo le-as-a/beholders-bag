@@ -6,7 +6,7 @@ const setSearch = payload => ({
 
 const CLEAR_SEARCH = '/clear-search';
 const clearSearch = () => ({
-    type: CLEAR_SEARCH
+    type: CLEAR_SEARCH,
 });
 
 export const setResults = results => async dispatch => dispatch(setSearch(results));
