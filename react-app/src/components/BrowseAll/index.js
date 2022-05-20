@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import './browseall.css';
 
 const BrowseAll = () => {
     const items = Object.values(useSelector(state => state.items));

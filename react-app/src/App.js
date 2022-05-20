@@ -7,6 +7,7 @@ import NavBar from './components/NavBar/index';
 import MainSearch from './components/MainSearch/index';
 import SearchResults from './components/SearchResults/index';
 import BrowseAll from './components/BrowseAll/index';
+import About from './components/About/index';
 import { setResults } from './store/search';
 import ItemPage from './components/ItemPage/index';
 
@@ -34,6 +35,9 @@ function App() {
       <Switch>
         <Route path='/' exact={true}>
           <MainSearch slugs={slugs} loaded={loaded} />
+        </Route>
+        <Route path='/about' exact={true}>
+          <About />
         </Route>
         <Route path='/items' exact={true}>
           <BrowseAll />

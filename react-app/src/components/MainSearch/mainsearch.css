@@ -1,15 +1,28 @@
 .main-search {
-    height: 60vh;
-    margin: auto;
+    display: flex;
+    flex-direction:column;
     width: 70vw;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.main-title {
+    font-family: 'Fredericka the Great', cursive;
+    margin: auto;
+    font-size: 50px;
+    color: #FF6B6B;
+    margin-bottom: 2rem;
+}
+
+.main-searchbar {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 #searchbar {
-    width: 60%;
+    width: 70%;
     font-size: xx-large;
     padding: 1rem;
     background-color: #292F36;
@@ -21,4 +34,48 @@
 
 #searchbar:focus {
     outline: none;
+}
+
+.main-searchbutton {
+    height: 3em;
+    width: 6em;
+    background-color: #4ECDC4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    margin-left: 1rem;
+    font-size: x-large;
+}
+
+.main-searchbutton:hover {
+    cursor: pointer;
+    background-color: #FF6B6B;
+}
+
+.insert-container {
+    margin-top: 10em;
+}
+
+.cute-insert {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#beholder {
+    height: 15em;
+}
+
+.chatbubble {
+    background: url('https://i.imgur.com/PEZxufm.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -5em;
+    width: 12em;
+    height: 12em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
 }

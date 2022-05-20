@@ -26,14 +26,27 @@ const MainSearch = ({ slugs }) => {
 
     return (
         <div className='main-search'>
-            <input
-                id='searchbar'
-                placeholder='What are you looking for?'
-                onChange={e => setSearch(e.target.value)}
-            />
-            <button
-                onClick={handleSearch}
-            >Search</button>
+            <div className='main-title'>
+                Take a peek in the Beholder's Bag...
+            </div>
+            <div className='main-searchbar'>
+                <input
+                    id='searchbar'
+                    placeholder='What are you looking for?'
+                    onChange={e => setSearch(e.target.value)}
+                />
+                <div className='main-searchbutton' onClick={handleSearch}>
+                    Search
+                </div>
+            </div>
+            <div className='insert-container'>
+                <div className='cute-insert'>
+                    <img src='https://i.imgur.com/5ifvDST.png' id='beholder' />
+                    <div className='chatbubble'>
+                        So you've come to<br />look at my wares?
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

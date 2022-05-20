@@ -1,0 +1,41 @@
+.about {
+    height: 60vh;
+    width: 65vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.about-title {
+    font-family: 'Fredericka the Great', cursive;
+    color: #FF6B6B;
+    font-size: 65px;
+    margin-bottom: 2rem;
+}
+
+.about-bio {
+    font-size: x-large;
+}
+
+.about-bio a {
+    color: #4ECDC4;
+    text-decoration: none;
+}
+
+.about-bio a:hover {
+    color: #F7FFF7;
+}
+
+.about-links {
+    display: flex;
+    flex-direction: row;
+    width: 20vw;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+#linkedin, #angellist, #github {
+    height: 50px;
+}

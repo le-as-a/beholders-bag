@@ -1,3 +1,16 @@
-.browseall {
-    margin: 70vw;
+.browse-all, .result-list {
+    width: 70vw;
+    margin: auto;
+    margin-top: 3rem;
+    max-height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.browse-all::-webkit-scrollbar, .result-list::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.browse-all::-webkit-scrollbar-thumb, .result-list::-webkit-scrollbar-thumb {
+    background-color: #4ECDC4;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import './searchresults.css';
 
@@ -17,16 +18,18 @@ const SearchResults = ({ slugs = null }) => {
     return (
         <div className='result-list'>
             {list.map(item => (
-                <NavLink to={`/items/${item.slug}`} className='result-link'>
-                    <div className='result-line' key={`${item.slug}`}>
-                        <div className='result-name'>{item.name}</div>
-                        <div className='result-type'>{item.type}</div>
-                        <div className='result-rarity'>{item.rarity}</div>
-                        <div className='result-attune'>
-                            {(item.requires_attunement === 'requires attunement') ? "Y" : "N"}
+                <>
+                    <NavLink to={`/items/${item.slug}`} className='result-link'>
+                        <div className='result-line' key={`${item.slug}`}>
+                            <div className='result-name'>{item.name}</div>
+                            <div className='result-type'>{item.type}</div>
+                            <div className='result-rarity'>{item.rarity}</div>
+                            <div className='result-attune'>
+                                {(item.requires_attunement === 'requires attunement') ? "Y" : "N"}
+                            </div>
                         </div>
-                    </div>
-                </NavLink>
+                    </NavLink>
+                </>
             ))}
         </div>
     )

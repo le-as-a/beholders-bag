@@ -15,5 +15,27 @@
 .result-line {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+.result-line:hover {
+    background-color: #4ECDC4;
+}
+
+.result-name {
+    min-width: 50%;
+    margin-left: 1rem;
+}
+
+.result-type {
+    min-width: 35%;
+}
+
+.result-rarity {
+    min-width: 10%;
+}
+
+.result-attune {
+    min-width: 5%;
+    margin-left: 1rem;
 }
