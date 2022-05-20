@@ -13,7 +13,6 @@ import ItemPage from './components/ItemPage/index';
 function App() {
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
-  const user = useSelector(state => state.session.user);
   let slugs = [];
   dispatch(allItems()).then(items => slugs.push(...items));
   dispatch(setResults(slugs));
@@ -31,7 +30,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar user={user} />
+      <NavBar />
       <Switch>
         <Route path='/' exact={true}>
           <MainSearch slugs={slugs} loaded={loaded} />
