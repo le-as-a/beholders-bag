@@ -1,6 +1,6 @@
 .nav-container {
+    margin-top: 3em;
     width: 80vw;
-    height: 15vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -17,13 +17,16 @@
     color: #FFE66D;
 }
 
-.nav-opt:hover {
-    text-decoration: underline .1rem;
-    text-underline-offset: 1rem;
-    cursor: pointer;
-}
-
 .nav-opt a {
     color: #FFE66D;
     text-decoration: none;
+}
+
+.nav-opt a:hover {
+    color: #FF6B6B;
+}
+
+.nav-border {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #FFE66D;
 }

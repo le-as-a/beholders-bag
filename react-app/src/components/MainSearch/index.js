@@ -1,28 +1,27 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { setResults } from '../../store/search';
-import './mainsearch.css';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
+import './mainsearch.css';
 
 const MainSearch = ({ slugs }) => {
     const [search, setSearch] = useState("");
+    const [autofill, setAutofill] = useState([])
+    const items = useSelector(state => state.items);
     const dispatch = useDispatch();
     const history = useHistory();
+    const results = [];
 
-    const handleSearch = () => {
-        let query = search.split(" ");
-        let results = [];
-        for (let s of slugs) {
-            for (let q of query) {
-                if (s.includes(q) && !results.includes(s)) {
-                    results.push(s);
-                }
+    useEffect(() => {
+        if (search) {
+            for (let s of slugs) {
+                if (s.includes(search.toLowerCase())) results.push(items[s]);
             }
-        }
-        dispatch(setResults(results));
-        history.push('/results');
-    }
+            setAutofill(results);
+        } else { setAutofill([]) }
+    }, [search, dispatch]);
 
     return (
         <div className='main-search'>
@@ -35,18 +34,32 @@ const MainSearch = ({ slugs }) => {
                     placeholder='What are you looking for?'
                     onChange={e => setSearch(e.target.value)}
                 />
-                <div className='main-searchbutton' onClick={handleSearch}>
-                    Search
-                </div>
             </div>
-            <div className='insert-container'>
-                <div className='cute-insert'>
-                    <img src='https://i.imgur.com/5ifvDST.png' id='beholder' alt='beholder' />
-                    <div className='chatbubble'>
-                        So you've come to<br />look at my wares?
+            {autofill.length > 0 ? (
+                <div className='autofill-search'>
+                    {autofill.map(item => (
+                        <NavLink to={`/items/${item.slug}`} className='auto-link'>
+                            <div className='autofill-line' key={`auto_${item.slug}`}>
+                                <div id='auto-name'>
+                                    {item.name}
+                                </div>
+                                <div id='auto-type'>
+                                    {item.type}
+                                </div>
+                            </div>
+                        </NavLink>
+                    ))}
+                </div>
+            ) : (
+                <div className='insert-container'>
+                    <div className='cute-insert'>
+                        <img src='https://i.imgur.com/5ifvDST.png' id='beholder' alt='beholder' />
+                        <div className='chatbubble'>
+                            So you've come to<br />look at my wares?
+                        </div>
                     </div>
                 </div>
-            </div>
+            )}
         </div>
     );
 }

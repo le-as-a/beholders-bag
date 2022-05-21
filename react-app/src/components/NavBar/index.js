@@ -4,15 +4,17 @@ import './navbar.css';
 
 const NavBar = () => {
     return (
-        <div className='nav-container'>
-            <div className='nav-opt'>
-                <NavLink to='/items'>Browse</NavLink>
-            </div>
-            <div className='nav-opt'>
-                <NavLink to='/about'>About</NavLink>
-            </div>
-            <div className='nav-opt'>
-                <NavLink to='/'>Main</NavLink>
+        <div className='nav-border'>
+            <div className='nav-container'>
+                <div className='nav-opt'>
+                    <NavLink to='/'>Main</NavLink>
+                </div>
+                <div className='nav-opt'>
+                    <NavLink to='/items'>Browse</NavLink>
+                </div>
+                <div className='nav-opt'>
+                    <NavLink to='/about'>About</NavLink>
+                </div>
             </div>
         </div>
     );
