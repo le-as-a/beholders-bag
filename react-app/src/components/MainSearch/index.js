@@ -16,8 +16,9 @@ const MainSearch = ({ slugs }) => {
 
     useEffect(() => {
         if (search) {
+            let converted = search.replaceAll(' ', '-').toLowerCase();
             for (let s of slugs) {
-                if (s.includes(search.toLowerCase())) results.push(items[s]);
+                if (s.includes(converted)) results.push(items[s]);
             }
             setAutofill(results);
         } else { setAutofill([]) }
