@@ -8,7 +8,7 @@ const ItemPage = ({ loaded }) => {
     const { itemSlug } = useParams();
     const active = items[itemSlug];
 
-    if (!loaded) return null;
+    if (!loaded) return <p>Loading...</p>;
 
     return (
         <>
